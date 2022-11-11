@@ -1,0 +1,151 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="MainWindow"
+    Title="Air Squadron Trophy Aircraftf Recognition" Height="350" Width="525" WindowStartupLocation="CenterScreen" Icon="Resources/RAF.ico" MinWidth="525" MinHeight="350" UseLayoutRounding="False">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/background.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+
+    <Grid x:Name="QuestionGrid" UseLayoutRounding="False" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="QImage" Margin="0" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="5"/>
+        <Button x:Name="OptnBtn1" Grid.Column="1" Margin="0" Grid.Row="8" IsEnabled="False">
+            <Viewbox x:Name="ViewOptn1">
+                <TextBlock x:Name="OptnText1" TextWrapping="Wrap"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="OptnBtn2" Grid.Column="3" Margin="0" Grid.Row="8" IsEnabled="False">
+            <Viewbox x:Name="ViewOptn2">
+                <TextBlock x:Name="OptnText2" TextWrapping="Wrap"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="OptnBtn3" Grid.Column="5" Margin="0" Grid.Row="8" IsEnabled="False">
+            <Viewbox x:Name="ViewOptn3">
+                <TextBlock x:Name="OptnText3" TextWrapping="Wrap"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="OptnBtn4" Grid.Column="7" Margin="0" Grid.Row="8" IsEnabled="False">
+            <Viewbox x:Name="ViewOptn4">
+                <TextBlock x:Name="OptnText4" TextWrapping="Wrap"/>
+            </Viewbox>
+        </Button>
+
+        <Button x:Name="OptnBtn5" Grid.Column="1" Grid.Row="10" Margin="0" IsEnabled="False">
+            <Viewbox x:Name="ViewOptn5">
+                <TextBlock x:Name="OptnText5" TextWrapping="Wrap"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="OptnBtn6" Grid.Column="3" Grid.Row="10" Margin="0" IsEnabled="False">
+            <Viewbox x:Name="ViewOptn6">
+                <TextBlock x:Name="OptnText6" TextWrapping="Wrap"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="OptnBtn7" Grid.Column="5" Grid.Row="10" Margin="0" IsEnabled="False">
+            <Viewbox x:Name="ViewOptn7">
+                <TextBlock x:Name="OptnText7" TextWrapping="Wrap"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="OptnBtn8" Grid.Column="7" Grid.Row="10" Margin="0" IsEnabled="False">
+            <Viewbox x:Name="ViewOptn8">
+                <TextBlock x:Name="OptnText8" TextWrapping="Wrap"/>
+            </Viewbox>
+        </Button>
+        <Image x:Name="RAF_Crest" Margin="0" RenderTransformOrigin="0.5,0.5" Source="Resources/RAF.png" Grid.ColumnSpan="3" Grid.Column="3"/>
+        <Grid x:Name="StartBtnGrid" Margin="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="65*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="StartBtn" Grid.Row="1" Margin="0" Grid.Column="1">
+                <Viewbox x:Name="ViewStart">
+                    <TextBlock x:Name="StartText" TextWrapping="Wrap" Text="Start" FontFamily="Arial"/>
+                </Viewbox>
+            </Button>
+        </Grid>
+        <Grid x:Name="QuitBtnGrid" Grid.Column="7" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="65*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="QuitBtn" Grid.Row="1" Margin="0" Grid.Column="1">
+                <Viewbox x:Name="ViewQuit">
+                    <TextBlock x:Name="QuitText" TextWrapping="Wrap" Text="Quit" FontFamily="Arial" FontSize="10"/>
+                </Viewbox>
+            </Button>
+        </Grid>
+        <Grid x:Name="ElapsedDisplayGrid" Grid.ColumnSpan="3" Grid.Column="6" Margin="19.6,4.6,0.4,0" Grid.Row="1" Grid.RowSpan="8" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7.5*"/>
+                <RowDefinition Height="7.5*"/>
+                <RowDefinition Height="80*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Margin="0,0,0,0.2">
+                <TextBlock TextWrapping="Wrap" Text="Elapsed Time:" VerticalAlignment="Top" FontFamily="Arial"/>
+            </Viewbox>
+            <Viewbox Margin="0" Grid.Row="1">
+                <TextBlock x:Name="ElapsedTimeTxt" TextWrapping="Wrap" Text="00:00.0" FontFamily="Arial" FontWeight="Bold" Foreground="Black">
+                    <TextBlock.Background>
+                        <SolidColorBrush Color="White" Opacity="0.6"/>
+                    </TextBlock.Background>
+                </TextBlock>
+            </Viewbox>
+        </Grid>
+        <Viewbox x:Name="ViewNumCorrect" Grid.Column="3" Margin="0" Grid.Row="3" Visibility="Hidden">
+            <TextBlock x:Name="NumberCorrectTxt" TextWrapping="Wrap" Text="Number Correct:   "/>
+        </Viewbox>
+        <Viewbox x:Name="ViewTimeTaken" Grid.Column="3" Margin="0" Grid.Row="4" Visibility="Hidden">
+            <TextBlock x:Name="TimeTakenTxt" TextWrapping="Wrap" Text="Time Taken:         "/>
+        </Viewbox>
+        <Viewbox x:Name="ViewScore" Grid.Column="3" Margin="0" Grid.Row="5" Visibility="Hidden">
+            <TextBlock x:Name="ScoreTxt" TextWrapping="Wrap" Text="Overall Score:      "/>
+        </Viewbox>
+        <Viewbox x:Name="ViewNumCorrectVari" Grid.Column="5" Margin="0" Grid.Row="3" Visibility="Hidden">
+            <TextBlock x:Name="NumCorrectTxtVari" TextWrapping="Wrap" Text="30"/>
+        </Viewbox>
+        <Viewbox x:Name="ViewTimeTakenVari" Grid.Column="5" Margin="0" Grid.Row="4" Visibility="Hidden">
+            <TextBlock x:Name="TimeTakenTxtVari" TextWrapping="Wrap" Text="0:00.0"/>
+        </Viewbox>
+        <Viewbox x:Name="ViewScoreVari" Grid.Column="5" Margin="0" Grid.Row="5" Visibility="Hidden">
+            <TextBlock x:Name="ScoreTxtVari" TextWrapping="Wrap" Text="30"/>
+        </Viewbox>
+
+
+    </Grid>
+</Window>
